@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&family=Roboto:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="wrapper">
+        <img
+          src="./images/icons/registra24-low-resolution-logo-white-on-transparent-background.png"
+          alt=""
+          width="152"
+        />
+        <div class="menu">
+          <ul class="menu-list">
+            <li><a href="http://">Home</a></li>
+            <li><a href="http://">Addresses</a></li>
+            <li><a href="http://">Owners</a></li>
+            <li><a href="http://">Contacts</a></li>
+          </ul>
+        </div>
+        <address>
+          <div class="phone">
+            <svg class="" width="24" height="24" fill="white">
+              <use href="./images/icons/icons.svg#phone"></use>
+            </svg>
+            <a href="tel:+380001111111">+380001111111</a>
+          </div>
+          <div class="phone">
+            <svg class="" width="24" height="24" fill="white">
+              <use href="./images/icons/icons.svg#phone"></use>
+            </svg>
+            <a href="tel:+380002222222">+380002222222</a>
+          </div>
+        </address>
+      </nav>
+      <button
+        class="menu-toggle js-open-menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <svg class="icon-mobile-menu" width="24" height="24">
+          <use href="./images/icons/icons.svg#mobile-menu"></use>
+        </svg>
+      </button>
+    </header>
+    <main>
+      <section id="hero">
+        <div class="wrapper">
+          <div class="hero-box">
+            <h1>Оренда юридичних адрес у києві</h1>
+            <p>Замовивши юридичну адресу у нас, Ви отримаєте:</p>
+            <ul class="hero-lst">
+              <li class="hero-item">
+                <svg class="" width="64" height="64">
+                  <use href=""></use>
+                </svg>
+                <p>Легальну юридичну адресу</p>
+              </li>
+              <li class="hero-item">
+                <svg class="" width="64" height="64">
+                  <use href=""></use>
+                </svg>
+                <p>Поштове обслуговування</p>
+              </li>
+              <li class="hero-item">
+                <svg class="" width="64" height="64">
+                  <use href=""></use>
+                </svg>
+                <p>Секретарське обслуговування</p>
+              </li>
+              <li class="hero-item">
+                <svg class="" width="64" height="64">
+                  <use href=""></use>
+                </svg>
+                <p>100% пролонгацію договору</p>
+              </li>
+            </ul>
+            <p>
+              Надішліть заявку прямо зараз і отримайте весь комплект документів
+              протягом 30 хвилин
+            </p>
+            <button type="button" class="order-btn">Залишити заявку</button>
+          </div>
+        </div>
+      </section>
+      <section id="addresses">
+        <div class="wrapper">
+          <h2>Юридичні адреси</h2>
+          <div class="office-tab">
+            <input
+              class="state"
+              type="radio"
+              title="tab-one"
+              name="tabs-state"
+              id="tab-one"
+              checked
+            />
+            <input
+              class="state"
+              type="radio"
+              title="tab-two"
+              name="tabs-state"
+              id="tab-two"
+            />
+            <input
+              class="state"
+              type="radio"
+              title="tab-three"
+              name="tabs-state"
+              id="tab-three"
+            />
+            <input
+              class="state"
+              type="radio"
+              title="tab-four"
+              name="tabs-state"
+              id="tab-four"
+            />
+
+            <div class="tabs flex-tabs">
+              <label for="tab-one" id="tab-one-label" class="tab"
+                >Оболонський</label
+              >
+              <label for="tab-two" id="tab-two-label" class="tab"
+                >Печерський</label
+              >
+              <label for="tab-three" id="tab-three-label" class="tab"
+                >Солом'янський</label
+              >
+              <label for="tab-four" id="tab-four-label" class="tab"
+                >Подольський</label
+              >
+
+              <div id="tab-one-panel" class="panel actived">
+                <h3>Оболонський район</h3>
+                <ul class="address-lst">
+                  <li class="address-item">
+                    <img src="./images/hero2.png" alt="" width="350" />
+                    <div class="">
+                      <h4 class="">
+                        Юридична адреса у Шевченківському районі, вул. Січових
+                        Стрільців, 21
+                      </h4>
+                      <div class="address-inf">
+                        <p class="">Площа об'єкта 20м<sup>2</sup></p>
+                        <p>2000 UAH</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="address-item">
+                    <img src="./images/hero2.png" alt="" width="350" />
+                    <div class="">
+                      <h4 class="">
+                        Юридична адреса у Шевченківському районі, вул. Січових
+                        Стрільців, 21
+                      </h4>
+                      <div class="address-inf">
+                        <p class="">Площа об'єкта 20м<sup>2</sup></p>
+                        <p>2000 UAH</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="address-item">
+                    <img src="./images/hero2.png" alt="" width="350" />
+                    <div class="">
+                      <h4 class="">
+                        Юридична адреса у Шевченківському районі, вул. Січових
+                        Стрільців, 21
+                      </h4>
+                      <div class="address-inf">
+                        <p class="">Площа об'єкта 20м<sup>2</sup></p>
+                        <p>2000 UAH</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="address-item">
+                    <img src="./images/hero2.png" alt="" width="350" />
+                    <div class="">
+                      <h4 class="">
+                        Юридична адреса у Шевченківському районі, вул. Січових
+                        Стрільців, 21
+                      </h4>
+                      <div class="address-inf">
+                        <p class="">Площа об'єкта 20м<sup>2</sup></p>
+                        <p>2000 UAH</p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div id="tab-two-panel" class="panel">
+                <h3>Оболонський район</h3>
+                <ul class="address-lst">
+                  <li class="address-item">
+                    <img src="./images/hero2.png" alt="" width="350" />
+                    <div class="">
+                      <h4 class="">
+                        Юридична адреса у Шевченківському районі, вул. Січових
+                        Стрільців, 21
+                      </h4>
+                      <div class="address-inf">
+                        <p class="">Площа об'єкта 20м<sup>2</sup></p>
+                        <p>2000 UAH</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="address-item">
+                    <img src="./images/hero2.png" alt="" width="350" />
+                    <div class="">
+                      <h4 class="">
+                        Юридична адреса у Шевченківському районі, вул. Січових
+                        Стрільців, 21
+                      </h4>
+                      <div class="address-inf">
+                        <p class="">Площа об'єкта 20м<sup>2</sup></p>
+                        <p>2000 UAH</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="address-item">
+                    <img src="./images/hero2.png" alt="" width="350" />
+                    <div class="">
+                      <h4 class="">
+                        Юридична адреса у Шевченківському районі, вул. Січових
+                        Стрільців, 21
+                      </h4>
+                      <div class="address-inf">
+                        <p class="">Площа об'єкта 20м<sup>2</sup></p>
+                        <p>2000 UAH</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="address-item">
+                    <img src="./images/hero2.png" alt="" width="350" />
+                    <div class="">
+                      <h4 class="">
+                        Юридична адреса у Шевченківському районі, вул. Січових
+                        Стрільців, 21
+                      </h4>
+                      <div class="address-inf">
+                        <p class="">Площа об'єкта 20м<sup>2</sup></p>
+                        <p>2000 UAH</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="address-item">
+                    <img src="./images/hero2.png" alt="" width="350" />
+                    <div class="">
+                      <h4 class="">
+                        Юридична адреса у Шевченківському районі, вул. Січових
+                        Стрільців, 21
+                      </h4>
+                      <div class="address-inf">
+                        <p class="">Площа об'єкта 20м<sup>2</sup></p>
+                        <p>2000 UAH</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="address-item">
+                    <img src="./images/hero2.png" alt="" width="350" />
+                    <div class="">
+                      <h4 class="">
+                        Юридична адреса у Шевченківському районі, вул. Січових
+                        Стрільців, 21
+                      </h4>
+                      <div class="address-inf">
+                        <p class="">Площа об'єкта 20м<sup>2</sup></p>
+                        <p>2000 UAH</p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div id="tab-three-panel" class="panel">
+                <h3>Оболонський район</h3>
+                <ul class="address-lst">
+                  <li class="address-item">
+                    <img src="./images/hero2.png" alt="" width="350" />
+                    <div class="">
+                      <h4 class="">
+                        Юридична адреса у Шевченківському районі, вул. Січових
+                        Стрільців, 21
+                      </h4>
+                      <div class="address-inf">
+                        <p class="">Площа об'єкта 20м<sup>2</sup></p>
+                        <p>2000 UAH</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="address-item">
+                    <img src="./images/hero2.png" alt="" width="350" />
+                    <div class="">
+                      <h4 class="">
+                        Юридична адреса у Шевченківському районі, вул. Січових
+                        Стрільців, 21
+                      </h4>
+                      <div class="address-inf">
+                        <p class="">Площа об'єкта 20м<sup>2</sup></p>
+                        <p>2000 UAH</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="address-item">
+                    <img src="./images/hero2.png" alt="" width="350" />
+                    <div class="">
+                      <h4 class="">
+                        Юридична адреса у Шевченківському районі, вул. Січових
+                        Стрільців, 21
+                      </h4>
+                      <div class="address-inf">
+                        <p class="">Площа об'єкта 20м<sup>2</sup></p>
+                        <p>2000 UAH</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="address-item">
+                    <img src="./images/hero2.png" alt="" width="350" />
+                    <div class="">
+                      <h4 class="">
+                        Юридична адреса у Шевченківському районі, вул. Січових
+                        Стрільців, 21
+                      </h4>
+                      <div class="address-inf">
+                        <p class="">Площа об'єкта 20м<sup>2</sup></p>
+                        <p>2000 UAH</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="address-item">
+                    <img src="./images/hero2.png" alt="" width="350" />
+                    <div class="">
+                      <h4 class="">
+                        Юридична адреса у Шевченківському районі, вул. Січових
+                        Стрільців, 21
+                      </h4>
+                      <div class="address-inf">
+                        <p class="">Площа об'єкта 20м<sup>2</sup></p>
+                        <p>2000 UAH</p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div id="tab-four-panel" class="panel">
+                <h3>Оболонський район</h3>
+                <ul class="address-lst">
+                  <li class="address-item">
+                    <img src="./images/hero2.png" alt="" width="350" />
+                    <div class="">
+                      <h4 class="">
+                        Юридична адреса у Шевченківському районі, вул. Січових
+                        Стрільців, 21
+                      </h4>
+                      <div class="address-inf">
+                        <p class="">Площа об'єкта 20м<sup>2</sup></p>
+                        <p>2000 UAH</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="address-item">
+                    <img src="./images/hero2.png" alt="" width="350" />
+                    <div class="">
+                      <h4 class="">
+                        Юридична адреса у Шевченківському районі, вул. Січових
+                        Стрільців, 21
+                      </h4>
+                      <div class="address-inf">
+                        <p class="">Площа об'єкта 20м<sup>2</sup></p>
+                        <p>2000 UAH</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="address-item">
+                    <img src="./images/hero2.png" alt="" width="350" />
+                    <div class="">
+                      <h4 class="">
+                        Юридична адреса у Шевченківському районі, вул. Січових
+                        Стрільців, 21
+                      </h4>
+                      <div class="address-inf">
+                        <p class="">Площа об'єкта 20м<sup>2</sup></p>
+                        <p>2000 UAH</p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="garantes">
+        <div class="wrapper">
+          <h2>Надаючи юридичну адресу, ми гарантуємо:</h2>
+          <ul>
+            <li>
+              <svg class="" width="" height="">
+                <use href=""></use>
+              </svg>
+              <h3>Отримання кореспонденції</h3>
+              <p>Отримання кореспонденції 2 рази на тиждень</p>
+            </li>
+            <li>
+              <svg class="" width="" height="">
+                <use href=""></use>
+              </svg>
+              <h3>Сканування</h3>
+              <p>Сканування кореспонденції до 10 сторінок на місяць</p>
+            </li>
+            <li>
+              <svg class="" width="" height="">
+                <use href=""></use>
+              </svg>
+              <h3>Зберігання та передача</h3>
+              <p>
+                Зберігання та передача поштової кореспонденції в офісі Бюро
+                (вул. Січових стрільців)
+              </p>
+            </li>
+            <li>
+              <svg class="" width="" height="">
+                <use href=""></use>
+              </svg>
+              <h3>Прийом дзвінків</h3>
+              <p>
+                Відповіді на телефонні дзвінки та підтвердження місцезнаходження
+                компанії державним органам та контрагентам
+              </p>
+            </li>
+            <li>
+              <svg class="" width="" height="">
+                <use href=""></use>
+              </svg>
+              <h3>Інформування</h3>
+              <p>
+                Інформування клієнта протягом дня з моменту отримання пошти:
+                відправка лицьової сторони конверта за допомогою месенджера
+              </p>
+            </li>
+            <li>
+              <svg class="" width="" height="">
+                <use href=""></use>
+              </svg>
+              <h3>Електронний архів</h3>
+              <p>Електронний облік (архів) вхідної кореспонденції</p>
+            </li>
+          </ul>
+          <h2>Додаткові можливості</h2>
+          <p>
+            Ми не ставимо Вас у рамки стандартних послуг та тарифних планів,
+            залежно від ваших потреб, допоможемо підібрати оптимальний набір
+            послуг – де Ви сплачуватимете лише за те, чим користуєтеся:
+          </p>
+          <ul>
+            <li>
+              <svg class="" width="" height="">
+                <use href=""></use>
+              </svg>
+              <h3>Індивідуальний графік</h3>
+              <p>
+                Отримання листів за індивідуальним графіком (частіше 2-х разів
+                на тиждень)
+              </p>
+            </li>
+            <li>
+              <svg class="" width="" height="">
+                <use href=""></use>
+              </svg>
+              <h3>Розширене сканування</h3>
+              <p>
+                Сканування понад 10 сторінок на місяць у рамках окремого
+                договору на сканування кореспонденції
+              </p>
+            </li>
+            <li>
+              <svg class="" width="" height="">
+                <use href=""></use>
+              </svg>
+              <h3>Пересилання «Новою поштою»</h3>
+              <p>
+                Пересилання поштової кореспонденції кур'єрською службою «Нова
+                пошта»
+              </p>
+            </li>
+            <li>
+              <svg class="" width="" height="">
+                <use href=""></use>
+              </svg>
+              <h3>Підготовка документів</h3>
+              <p>
+                Підготовка базових кадрових документів (наказів, розпоряджень
+                тощо)
+              </p>
+            </li>
+            <li>
+              <svg class="" width="" height="">
+                <use href=""></use>
+              </svg>
+              <h3>ВІДПРАВЛЕННЯ КОРРЕСПОНДЕНЦІЇ</h3>
+              <p>
+                Надсилання кореспонденції від імені клієнта контрагентам або
+                державним (контролюючим) органам влади з відділення «Укрпошти»
+              </p>
+            </li>
+            <li>
+              <svg class="" width="" height="">
+                <use href=""></use>
+              </svg>
+              <h3>Офіс для зустрічей</h3>
+              <p>
+                Надання офісу для проведення виїзної перевірки та зустрічей з
+                партнерами та клієнтами
+              </p>
+            </li>
+          </ul>
+          <p>
+            Надішліть заявку прямо зараз і отримайте весь комплект документів
+            протягом 30 хвилин
+          </p>
+          <button type="button">Залишити заявку</button>
+        </div>
+      </section>
+      <section id="algoritm">
+        <div class="wrapper">
+          <h2>Як отримати юридичну адресу?</h2>
+          <ul>
+            <li>
+              <svg class="" width="" height="">
+                <use href=""></use>
+              </svg>
+              <p>Оберіть юридичну адресу на сайті та надішліть заявку</p>
+            </li>
+            <li>
+              <svg class="" width="" height="">
+                <use href=""></use>
+              </svg>
+              <p>
+                Протягом 10 хвилин наш спеціаліст зв'яжеться з Вами,
+                проконсультує та запросить всю необхідну інформацію для
+                підготовки договору
+              </p>
+            </li>
+            <li>
+              <svg class="" width="" height="">
+                <use href=""></use>
+              </svg>
+              <p>
+                Ви можете здійснити оплату через сайт, безготівковим розрахунком
+                або в офісі компанії
+              </p>
+            </li>
+            <li>
+              <svg class="" width="" height="">
+                <use href=""></use>
+              </svg>
+              <p>
+                Через 30 хвилин ми підготуємо договір на юридичну адресу та за
+                запитом надамо копію права власності на приміщення
+              </p>
+            </li>
+            <li>
+              <svg class="" width="" height="">
+                <use href=""></use>
+              </svg>
+              <p>Готово! Можна реєструвати компанію</p>
+            </li>
+          </ul>
+          <p>
+            Надішліть заявку прямо зараз і отримайте весь комплект документів
+            протягом 30 хвилин
+          </p>
+          <button type="button">Залишити заявку</button>
+        </div>
+      </section>
+      <section id="special">
+        <div class="wrapper">
+          <img src="" alt="" />
+          <h2>Спеціальні умови та програма лояльності</h2>
+          <ul>
+            <li>
+              <p>
+                Для юридичних компаній та оптових покупців пропонуємо спеціальні
+                умови та програму лояльності
+              </p>
+            </li>
+            <li>
+              <p>
+                Надішліть заявку прямо зараз, наш спеціаліст зв'яжеться з Вами і
+                розповість про вигоди більш детально
+              </p>
+            </li>
+          </ul>
+          <button type="button">Залишити заявку</button>
+        </div>
+      </section>
+      <section id="benefits">
+        <div class="wrapper">
+          <h2>Чому ми?</h2>
+          <ul>
+            <li>
+              <svg class="" width="" height="">
+                <use href=""></use>
+              </svg>
+              <h3>Надійність</h3>
+              <p>Документарно підтверджуємо легальність надання юрадреси</p>
+            </li>
+            <li>
+              <svg class="" width="" height="">
+                <use href=""></use>
+              </svg>
+              <h3>ДОСВІД</h3>
+              <p>
+                Надаємо послуги з 2006 року. Дорожимо своєю репутацією та кожним
+                клієнтом
+              </p>
+            </li>
+            <li>
+              <svg class="" width="" height="">
+                <use href=""></use>
+              </svg>
+              <h3>ГАРАНТІЇ</h3>
+              <p>
+                Повернемо гроші за адресу, якщо Вам відмовлять у реєстрації
+                через невідповідність адреси вимогам законодавства
+              </p>
+            </li>
+            <li>
+              <svg class="" width="" height="">
+                <use href=""></use>
+              </svg>
+              <h3>ОПЕРАТИВНІСТЬ</h3>
+              <p>
+                Готуємо документи протягом 30 хвилин, щоб Ви займалися бізнесом,
+                а не бюрократією
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="contacts">
+        <div class="wrapper">
+          <h2>Залишились питання</h2>
+          <h3>
+            Надішліть нам повідомлення і ми оперативно відповімо на всі
+            запитання
+          </h3>
+          <form action="" method="post"></form>
+          <button type="button">Залишити заявку</button>
+        </div>
+      </section>
+    </main>
+    <!-- /*============================|mobile-menu|===========================*/ -->
+    <div class="mobile-container js-menu-container" id="mobile-menu">
+      <button class="mobile-close-button js-close-menu" type="button">
+        <svg class="close-icon" width="40" height="40">
+          <use href="./images/icons/icons.svg#close"></use>
+        </svg>
+      </button>
+      <ul class="mobile-nav">
+        <li>
+          <a class="mobile-nav-itemactive" href="./index.html">Studio</a>
+        </li>
+        <li>
+          <a class="mobile-nav-item" href="./portfolio.html">Portfolio</a>
+        </li>
+        <li>
+          <a class="mobile-nav-item" href="">Contacts</a>
+        </li>
+      </ul>
+
+      <ul class="mobile-contacts">
+        <li>
+          <a
+            class="mobile-contacts-item"
+            href="tel:+110001111111"
+            target="_blank"
+            >+11 (000) 111-11-11</a
+          >
+        </li>
+        <li>
+          <a
+            class="mobile-contacts-item"
+            href="mailto:info@devstudio.com"
+            target="_blank"
+            >info@devstudio.com</a
+          >
+        </li>
+      </ul>
+
+      <ul class="mobile-social">
+        <li class="mobile-social-item">
+          <a href="https://www.instagram.com/" target="_blank">
+            <svg class="icon-menu" width="24" height="24">
+              <use href="./images/icons/icons.svg#instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="mobile-social-item">
+          <a href="https://twitter.com/" target="_blank">
+            <svg class="icon-menu" width="24" height="24">
+              <use href="./images/icons/icons.svg#twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="mobile-social-item">
+          <a href="https://facebook.com/" target="_blank">
+            <svg class="icon-menu" width="24" height="24">
+              <use href="./images/icons/icons.svg#facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="mobile-social-item">
+          <a href="https://www.linkedin.com/" target="_blank">
+            <svg class="icon-menu" width="24" height="24">
+              <use href="./images/icons/icons.svg#linkedin"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <script src="./js/mobile-menu.js"></script>
+  </body>
+</html>

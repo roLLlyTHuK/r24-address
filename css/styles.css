@@ -420,7 +420,10 @@ address {
 }
 
 /*============================|adress|===========================*/
-.wrapper h2 {
+.address-box {
+  padding: 0 10px;
+}
+.address-box h2 {
   margin-bottom: 24px;
 }
 .office-tab {
@@ -579,6 +582,7 @@ address {
   flex-direction: column;
   justify-content: center;
   gap: 24px;
+  padding: 0 10px;
 }
 .garantes-box ul {
   display: flex;
@@ -609,8 +613,7 @@ address {
   text-align: left;
 }
 /*============================|algoritm|===========================*/
-
-.row {
+.algoritm-box[padding: 0 10px;] .row {
   float: left;
   width: 100%;
 }
@@ -699,6 +702,7 @@ address {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 0 10px;
 }
 .special-content {
   display: flex;
@@ -720,11 +724,12 @@ address {
 .special-box p {
   text-align: left;
 }
-/*============================|why|===========================*/
+/*============================|Benefits|===========================*/
 .benefits-box {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 0 10px;
 }
 .benefits-box > ul {
   display: flex;
@@ -745,4 +750,8 @@ address {
 }
 .benefits-item > div h3 {
   text-align: left;
+}
+/*============================|Contacts|===========================*/
+.contacts-box {
+  padding: 0 10px;
 }

@@ -293,7 +293,7 @@ address {
     justify-content: center;
     margin: 0 auto;
   }
-  nav > img {
+  nav img {
     margin-right: 24px;
   }
   .menu {
@@ -328,7 +328,7 @@ address {
   }
 }
 @media only screen and (min-width: 1024px) {
-  nav > img {
+  nav img {
     margin-right: 50px;
   }
   .menu {
@@ -341,11 +341,11 @@ address {
 }
 /*============================|Hero|===========================*/
 #hero {
-  width: 100vw;
+  width: 100%;
   padding-bottom: 0;
   background-image: radial-gradient(
-      rgba(27, 69, 113, 0.7),
-      rgba(27, 69, 113, 0.7)
+      rgba(27, 69, 113, 0.6),
+      rgba(27, 69, 113, 0.6)
     ),
     url(../images/hero3.png),
     radial-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));
@@ -398,13 +398,8 @@ address {
   margin: 24px auto;
 }
 @media only screen and (min-width: 1024px) {
-  #hero {
-    width: 100vw;
-    height: 100vh;
-  }
   .hero-box {
     width: 750px;
-    border: 1px solid red;
   }
   .hero-lst {
     display: flex;
@@ -488,23 +483,30 @@ address {
   justify-content: center;
   align-items: center;
   width: 100%;
-  column-gap: 12px;
-  row-gap: 24px;
+  gap: 24px;
 }
 .address-item {
-  flex-basis: 350px;
+  flex-basis: 250px;
   border: 2px dotted var(--accent-color);
-  padding: 10px;
+  padding: 12px 12px 4px;
+  background-color: var(--accent-color);
+  border-radius: 8px;
+}
+.address-item h4 {
+  border-bottom: 2px solid var(--subaccent-color);
 }
 .address-inf {
   display: flex;
-  justify-content: space-between;
+  justify-content: left;
   align-items: baseline;
-  padding: 24px;
+  padding: 10px 5px 0;
+  gap: 8px;
 }
 .address-inf > p:last-child {
-  font-size: 20px;
-  font-weight: 800;
+  background-color: var(--subaccent-color);
+  font-weight: 700;
+  border-radius: 8px;
+  text-align: center;
 }
 @media (max-width: 600px) {
   .flex-tabs {
@@ -570,4 +572,177 @@ address {
   #tab-four:checked ~ .tabs #tab-four-panel {
     border-bottom: 1px solid #ccc;
   }
+}
+/*============================|garantes|===========================*/
+.garantes-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+}
+.garantes-box ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+.garantes-box > p {
+  text-align: center;
+}
+.garantes-item,
+.add-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.garantes-item > div,
+.add-item > div {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+}
+.garantes-item > div h3,
+.add-item > div h3 {
+  text-align: left;
+}
+/*============================|algoritm|===========================*/
+
+.row {
+  float: left;
+  width: 100%;
+}
+.timeline-both-side {
+  float: left;
+  width: 96%;
+  margin: 20px 2% 50px;
+  position: relative;
+  box-sizing: border-box;
+}
+.timeline-both-side:before {
+  background-color: var(--subaccent-color);
+  bottom: 0;
+  content: " ";
+  left: 50%;
+  position: absolute;
+  top: 0;
+  width: 1px;
+}
+.timeline-both-side:after {
+  border-radius: 50%;
+  bottom: -22px;
+  content: "";
+  height: 22px;
+  left: 50%;
+  margin-left: -11px;
+  position: absolute;
+  width: 22px;
+  border: 2px solid var(--subaccent-color);
+}
+.timeline-both-side li {
+  position: relative;
+  float: left;
+  width: 100%;
+}
+.timeline-both-side li .border-line {
+  background-color: var(--subaccent-color);
+  font-size: 1.4em;
+  height: 1px;
+  left: 50%;
+  margin-left: -8%;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  width: 8%;
+  z-index: 100;
+}
+.timeline-both-side li.opposite-side .border-line {
+  left: auto;
+  right: 50%;
+  margin-left: 0;
+  margin-right: -8%;
+}
+.timeline-both-side li .border-line:before {
+  background-color: var(--subaccent-color);
+  content: "";
+  height: 7px;
+  position: absolute;
+  right: -4px;
+  top: -3px;
+  width: 7px;
+}
+.timeline-both-side li.opposite-side .border-line:before {
+  left: -4px;
+  right: auto;
+}
+.timeline-both-side li .timeline-description {
+  border-radius: 8px;
+  background-color: var(--accent-color);
+  border: 1px solid var(--subaccent-color);
+  float: left;
+  font-size: 14px;
+  padding: 10px;
+  position: relative;
+  width: 42%;
+}
+.timeline-both-side li.opposite-side .timeline-description {
+  float: right;
+}
+
+.algoritm-box > p {
+  text-align: center;
+}
+/*============================|Special|===========================*/
+.special-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.special-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+}
+.special-content img {
+  width: 320px;
+}
+.content-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 320px;
+}
+.special-box p {
+  text-align: left;
+}
+/*============================|why|===========================*/
+.benefits-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.benefits-box > ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.benefits-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.benefits-item > div {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+}
+.benefits-item > div h3 {
+  text-align: left;
 }

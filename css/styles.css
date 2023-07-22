@@ -33,6 +33,7 @@ h5,
 h6 {
   padding: 0;
   margin: 0;
+  word-wrap: break-word;
 }
 p {
   padding: 0;
@@ -208,43 +209,47 @@ address {
   }
 }
 /*============================|Hero|===========================*/
+.hero {
+  background-image: radial-gradient(
+      rgba(27, 69, 113, 0.7),
+      rgba(27, 69, 113, 0.7)
+    ),
+    url(../images/hero3.png),
+    radial-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));
+  background-size: contain;
+  background-position: left;
+  background-repeat: no-repeat;
+}
 .hero-box {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 4px;
   text-align: center;
-  padding: 100px 10px 0;
+  padding: 80px 24px 0;
   margin: 0 auto;
-  background-image: radial-gradient(
-      rgba(27, 69, 113, 0.6),
-      rgba(27, 69, 113, 0.6)
-    ),
-    url(../images/hero3.png),
-    radial-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  width: 400px;
 }
 .hero-lst {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  justify-content: center;
+  gap: 24px;
 }
 .hero-item {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 8px;
-  max-width: 300px;
+  gap: 12px;
+  flex-basis: auto;
+  max-width: 320px;
   text-align: left;
 }
 
 .order-btn {
   display: block;
   max-width: 300px;
-  height: 71px;
+  height: 54px;
   color: var(--text-color);
   background-color: var(--subaccent-color);
   border: none;

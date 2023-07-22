@@ -68,6 +68,7 @@ h2 {
   text-align: center;
   text-transform: uppercase;
   line-height: 1.2;
+  margin-bottom: 12px;
 }
 h3 {
   font-family: "Roboto", sans-serif;
@@ -76,10 +77,11 @@ h3 {
   text-align: center;
   text-transform: uppercase;
   line-height: 1.5;
+  margin-bottom: 8px;
 }
 section {
   display: block;
-  padding: 70px 0 120px;
+  padding: 80px 10px;
   margin: 0 auto;
 }
 .wrapper {
@@ -125,158 +127,19 @@ section {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-/*============================|mobile menu|===========================*/
-.menu-toggle {
-  height: 40px;
-  width: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-  padding: 0;
-  background-color: var(--text-color);
-  cursor: pointer;
-  border: none;
-  border-radius: 50%;
-  outline: none;
-  position: absolute;
-  top: 24px;
-  right: 24px;
-}
-.menu-toggle:hover,
-.menu-toggle:focus {
-  background-color: var(--subaccent-color);
-}
-.icon-mobile-menu {
-  width: 24px;
-  height: 24px;
-  stroke: var(--bg-color);
-}
-.mobile-container {
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 95%;
-  padding: 80px 0 40px 40px;
-  transform: translateX(200%);
-  transition: transform 500ms ease-in-out;
-  background: var(--text-color);
-  box-shadow: 0px 2px 1px rgba(32, 35, 100, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
-}
-.mobile-container.is-open {
-  transform: translateX(50vw);
-}
-.mobile-close-button {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: var(--accent-color);
-  border: 1px solid green;
-  padding: 0;
-  position: absolute;
-  top: 24px;
-  right: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-.mobile-nav {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 40px;
-  padding: 0px;
-  margin-bottom: auto;
-}
-.mobile-nav-item {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.11;
-  letter-spacing: 0.02em;
-  text-transform: capitalize;
-  color: orange;
-}
-.active {
-  color: orangered;
-}
-.mobile-contacts {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 40px;
-  padding: 0px;
-  margin-bottom: 48px;
-}
-.mobile-contacts-item {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  color: green;
-}
-.mobile-contacts-item:hover,
-.mobile-contacts-item:focus {
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 1.11;
-  letter-spacing: 0.02em;
-  text-transform: capitalize;
-  color: green;
-}
-.mobile-social {
-  display: flex;
-  align-items: flex-start;
-  gap: 56px;
-  margin: 0;
-}
-.mobile-social-item .link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: blue;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  position: relative;
-}
-@media screen and (max-width: 427px) {
-  .mobile-nav-item {
-    font-size: 24px;
-  }
-
-  .mobile-contacts-item {
-    font-size: 18px;
-  }
-  .mobile-contacts-item:hover,
-  .mobile-contacts-item:focus {
-    font-size: 24px;
-  }
-  .mobile-social {
-    gap: 18px;
-  }
-}
-.icon-menu {
-  display: inline-block;
-  position: absolute;
-  fill: green;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
 /*============================|Menu|===========================*/
 header {
   display: block;
   margin: 0 auto;
 }
 nav {
+  position: fixed;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  background-color: var(--bg-color);
+  width: 100%;
+  z-index: 500;
 }
 .menu {
   display: none;
@@ -284,11 +147,7 @@ nav {
 address {
   display: none;
 }
-
 @media only screen and (min-width: 786px) {
-  .menu-toggle {
-    display: none;
-  }
   nav {
     justify-content: center;
     margin: 0 auto;
@@ -343,6 +202,17 @@ address {
 #hero {
   width: 100%;
   padding-bottom: 0;
+}
+
+.hero-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  text-align: center;
+  padding: 100px 10px 0;
+  margin: 0 auto;
   background-image: radial-gradient(
       rgba(27, 69, 113, 0.6),
       rgba(27, 69, 113, 0.6)
@@ -354,17 +224,6 @@ address {
   background-repeat: no-repeat;
   width: 100%;
   max-width: 1440px;
-}
-
-.hero-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 4px;
-  text-align: center;
-  padding: 0 10px;
-  margin: 0 auto;
 }
 .hero-lst {
   display: flex;
@@ -382,7 +241,7 @@ address {
 
 .order-btn {
   display: block;
-  width: 366px;
+  width: 300px;
   height: 71px;
   color: var(--text-color);
   background-color: var(--subaccent-color);
@@ -449,7 +308,8 @@ address {
   display: none;
   width: 100%;
   flex-basis: auto;
-  border-top: 2px solid var(--accent-color);
+  border-top: 1px solid var(--accent-color);
+  border-radius: 8px;
 }
 .office-tab .tab {
   display: inline-block;
@@ -458,8 +318,7 @@ address {
   background-color: var(--subaccent-color);
   cursor: pointer;
   border-left: 3px solid var(--bg-color);
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  border-radius: 8px;
 }
 .office-tab .tab:hover {
   background-color: var(--accent-color);
@@ -515,10 +374,6 @@ address {
   .flex-tabs {
     flex-direction: column;
   }
-  .office-tab .tab {
-    border-top-right-radius: 0;
-    border-top-left-radius: 20px;
-  }
   .office-tab .flex-tabs .panel {
     background-color: var(--subaccent-color);
     padding: 20px;
@@ -526,9 +381,7 @@ address {
     display: none;
     width: 100%;
     flex-basis: auto;
-    border-top: 2px solid var(--accent-color);
-
-    border-bottom-left-radius: 20px;
+    border-top: 1px solid var(--accent-color);
   }
   .flex-tabs .tab {
     background: var(--subaccent-color);
@@ -574,6 +427,29 @@ address {
   #tab-three:checked ~ .tabs #tab-three-panel,
   #tab-four:checked ~ .tabs #tab-four-panel {
     border-bottom: 1px solid #ccc;
+  }
+  .address-lst {
+    all: unset;
+    scroll-snap-type: x mandatory;
+    overflow: auto;
+    display: flex;
+    gap: 24px;
+  }
+  .address-item {
+    padding: 8px 8px 4px;
+    background-color: var(--accent-color);
+    border-radius: 8px;
+    flex-basis: 300px;
+    scroll-snap-align: start;
+  }
+}
+@media only screen and (max-width: 319px) {
+  .address-item {
+    padding: 2px;
+    background-color: var(--accent-color);
+    border-radius: 8px;
+    flex-basis: 100%;
+    scroll-snap-align: start;
   }
 }
 /*============================|garantes|===========================*/
@@ -755,3 +631,218 @@ address {
 .contacts-box {
   padding: 0 10px;
 }
+/*============================|mobile menu|===========================*/
+.menu-toggle {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  background-color: var(--text-color);
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  position: fixed;
+  top: 35px;
+  right: 24px;
+  z-index: 500;
+}
+.menu-toggle:hover,
+.menu-toggle:focus {
+  background-color: var(--subaccent-color);
+}
+.icon-mobile-menu {
+  width: 24px;
+  height: 24px;
+  stroke: var(--bg-color);
+}
+.mobile-container {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 100px 80px;
+  transform: translateX(200%);
+  transition: transform 500ms ease-in-out;
+  background: rgba(28, 53, 79, 0.8);
+  z-index: 999;
+}
+.mobile-container.is-open {
+  transform: translateX(0);
+}
+.mobile-close-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--subaccent-color);
+  border: 1px solid var(--accent-color);
+  padding: 0;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.mobile-box {
+  background-color: var(--subaccent-color);
+  border-radius: 20px;
+  padding: 24px;
+  margin-bottom: 35%;
+}
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 0px;
+}
+.mobile-nav-item {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+}
+.mobile-contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  padding: 0px;
+  margin-bottom: 24px;
+}
+.mobile-contacts-item {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+.mobile-contacts-item:hover,
+.mobile-contacts-item:focus {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+}
+.mobile-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+}
+.mobile-social-item a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+@media screen and (max-width: 427px) {
+  .mobile-nav-item {
+    font-size: 18px;
+  }
+
+  .mobile-contacts-item {
+    font-size: 16px;
+  }
+  .mobile-contacts-item:hover,
+  .mobile-contacts-item:focus {
+    font-size: 18px;
+  }
+  .mobile-social {
+    gap: 8px;
+  }
+}
+.icon-menu {
+  display: inline-block;
+  position: absolute;
+  fill: var(--text-color);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media only screen and (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+/*============================|Modal|===========================*/
+/* Стили для подложки */
+
+.overlay {
+  /* Скрываем подложку  */
+  opacity: 0;
+  visibility: hidden;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 20;
+  transition: 0.3s all;
+}
+
+/* Стили для модальных окон */
+
+.modal {
+  /* Скрываем окна  */
+  opacity: 0;
+  visibility: hidden;
+
+  /*  Установаем ширину окна  */
+  width: 100%;
+  max-width: 500px;
+
+  /*  Центрируем и задаем z-index */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 30; /* Должен быть выше чем у подложки*/
+
+  /*  Побочные стили   */
+  box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 30px;
+  border-radius: 3px;
+  background-color: #fff;
+  transition: 0.3s all;
+}
+
+/* Стили для активных классов подложки и окна */
+
+.modal.active,
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Стили для кнопки закрытия */
+
+.modal__cross {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  fill: #444;
+  cursor: pointer;
+}
+
+/* Стили для кнопок. Мы ведь порядочные разработчики, негоже простые ссылки оставлять */

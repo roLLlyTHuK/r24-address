@@ -37,6 +37,7 @@ h6 {
 p {
   padding: 0;
   margin: 0;
+  word-wrap: break-word;
 }
 /*============================|global|===========================*/
 body {
@@ -83,6 +84,7 @@ section {
   display: block;
   padding: 80px 10px;
   margin: 0 auto;
+  border: 2px dotted red;
 }
 .wrapper {
   padding: 0;
@@ -145,11 +147,12 @@ header {
 nav {
   position: fixed;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   align-items: center;
   background-color: var(--bg-color);
   width: 100%;
   z-index: 500;
+  margin: 0 auto;
 }
 .menu {
   display: none;
@@ -158,10 +161,6 @@ address {
   display: none;
 }
 @media only screen and (min-width: 786px) {
-  nav {
-    justify-content: center;
-    margin: 0 auto;
-  }
   nav img {
     margin-right: 24px;
   }
@@ -209,11 +208,6 @@ address {
   }
 }
 /*============================|Hero|===========================*/
-#hero {
-  width: 100%;
-  padding-bottom: 0;
-}
-
 .hero-box {
   display: flex;
   flex-direction: column;
@@ -232,8 +226,6 @@ address {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  width: 100%;
-  max-width: 1440px;
 }
 .hero-lst {
   display: flex;
@@ -245,13 +237,13 @@ address {
   justify-content: flex-start;
   align-items: center;
   gap: 8px;
-  width: 300px;
+  max-width: 300px;
   text-align: left;
 }
 
 .order-btn {
   display: block;
-  width: 300px;
+  max-width: 300px;
   height: 71px;
   color: var(--text-color);
   background-color: var(--subaccent-color);

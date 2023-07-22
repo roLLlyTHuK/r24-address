@@ -497,7 +497,10 @@ address {
   text-align: left;
 }
 /*============================|algoritm|===========================*/
-.algoritm-box[padding: 0 10px;] .row {
+.algoritm-box {
+  padding: 0 10px;
+}
+.row {
   float: left;
   width: 100%;
 }

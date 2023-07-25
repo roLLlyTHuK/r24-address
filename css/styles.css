@@ -9,6 +9,7 @@
   --text-color: #f4f5f7;
   --accent-color: #1a56db;
   --subaccent-color: #3f83f8;
+  --modal-color: #d0e0f5;
 }
 
 img {
@@ -168,7 +169,6 @@ address {
     display: flex;
     align-items: center;
     font-size: 12px;
-    text-transform: uppercase;
     margin-right: 24px;
   }
 
@@ -201,10 +201,10 @@ address {
   }
   .menu {
     margin-right: 50px;
-    font-size: 16px;
+    font-size: 14px;
   }
   address a {
-    font-size: 16px;
+    font-size: 12px;
   }
 }
 /*============================|Hero|===========================*/
@@ -257,7 +257,7 @@ address {
   border-radius: 8px;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 14px;
   text-transform: uppercase;
   line-height: 1.5;
   letter-spacing: 0.04em;
@@ -622,6 +622,7 @@ address {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  gap: 24px;
 }
 .benefits-item {
   display: flex;
@@ -639,8 +640,104 @@ address {
   text-align: left;
 }
 /*============================|Contacts|===========================*/
-.contacts-box {
-  padding: 0 10px;
+.contact-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+}
+.sender-box {
+  width: 100%;
+  margin: 0 auto;
+  padding: 24px;
+}
+.form-box label {
+  font-size: 16px;
+  font-weight: 600;
+}
+.contact-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  padding: 24px;
+}
+@media only screen and (min-width: 768px) {
+  .contact-box {
+    width: 450px;
+  }
+  .sender-box {
+    width: 450px;
+  }
+}
+.contact-lst {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+}
+.contact-text {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+  margin-left: 12px;
+}
+.social-lst {
+  position: relative;
+  font-size: 22px;
+  text-align: center;
+  padding: 0;
+}
+
+.social-lst li a {
+  color: var(--text-color);
+}
+
+.social-lst li {
+  position: relative;
+  display: inline-block;
+  height: 32px;
+  width: 32px;
+  margin: 10px 3px;
+  line-height: 32px;
+  border-radius: 50%;
+  color: var(--text-color);
+  background-color: var(--subaccent-color);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.social-lst li:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  border-radius: 50%;
+  opacity: 0;
+  box-shadow: 0 0 0 1px #fff;
+  transition: all 0.2s ease-in-out;
+}
+
+.social-lst li:hover {
+  background-color: #fff;
+  transform: scale(1.15);
+  transition-timing-function: cubic-bezier(0.37, 0.74, 0.15, 1.65);
+}
+
+.social-lst li:hover:after {
+  opacity: 1;
+  transform: scale(1.25);
+  transition-timing-function: cubic-bezier(0.37, 0.74, 0.15, 1.65);
+}
+
+.social-lst li:hover a {
+  color: var(--accent-color);
 }
 /*============================|mobile menu|===========================*/
 .menu-toggle {
@@ -818,7 +915,7 @@ address {
 
   /*  Установаем ширину окна  */
   width: 100%;
-  max-width: 500px;
+  max-width: 400px;
 
   /*  Центрируем и задаем z-index */
   position: fixed;
@@ -830,9 +927,9 @@ address {
   /*  Побочные стили   */
   box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
   text-align: center;
-  padding: 30px;
-  border-radius: 3px;
-  background-color: #fff;
+  padding: 50px 30px 24px;
+  border-radius: 8px;
+  background-color: var(--subaccent-color);
   transition: 0.3s all;
 }
 
@@ -852,8 +949,61 @@ address {
   position: absolute;
   top: 20px;
   right: 20px;
-  fill: #444;
+  fill: var(--text-color);
   cursor: pointer;
 }
-
-/* Стили для кнопок. Мы ведь порядочные разработчики, негоже простые ссылки оставлять */
+form > h2 {
+  text-align: center;
+  text-transform: uppercase;
+}
+.form-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+.form-box > button {
+  background-color: var(--accent-color);
+  padding: 8px 24px;
+  height: auto;
+}
+label {
+  display: block;
+  text-align: left;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  margin-bottom: 4px;
+}
+input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid var(--accent-color);
+  border-radius: 4px;
+  background-color: transparent;
+  margin-bottom: 12px;
+  outline: transparent;
+  color: var(--text-color);
+}
+input:focus {
+  background-color: var(--accent-color);
+  caret-color: var(--text-color);
+}
+textarea {
+  width: 100%;
+  height: 120px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--text-color);
+  border: 1px solid var(--accent-color);
+  border-radius: 4px;
+  background-color: transparent;
+  padding: 8px 16px;
+  outline: transparent;
+  resize: none;
+}
+textarea:focus {
+  background-color: var(--accent-color);
+  caret-color: var(--text-color);
+}
